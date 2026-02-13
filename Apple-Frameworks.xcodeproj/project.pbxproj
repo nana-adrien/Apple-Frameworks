@@ -48,16 +48,6 @@
 			path = "Apple-Frameworks";
 			sourceTree = "<group>";
 		};
-		CE2D8C952F3C1D48004A852C /* Apple-FrameworksTests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = "Apple-FrameworksTests";
-			sourceTree = "<group>";
-		};
-		CE2D8C9F2F3C1D48004A852C /* Apple-FrameworksUITests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = "Apple-FrameworksUITests";
-			sourceTree = "<group>";
-		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,8 +79,6 @@
 			isa = PBXGroup;
 			children = (
 				CE2D8C832F3C1D47004A852C /* Apple-Frameworks */,
-				CE2D8C952F3C1D48004A852C /* Apple-FrameworksTests */,
-				CE2D8C9F2F3C1D48004A852C /* Apple-FrameworksUITests */,
 				CE2D8C822F3C1D47004A852C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -143,9 +131,6 @@
 			dependencies = (
 				CE2D8C942F3C1D48004A852C /* PBXTargetDependency */,
 			);
-			fileSystemSynchronizedGroups = (
-				CE2D8C952F3C1D48004A852C /* Apple-FrameworksTests */,
-			);
 			name = "Apple-FrameworksTests";
 			packageProductDependencies = (
 			);
@@ -165,9 +150,6 @@
 			);
 			dependencies = (
 				CE2D8C9E2F3C1D48004A852C /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				CE2D8C9F2F3C1D48004A852C /* Apple-FrameworksUITests */,
 			);
 			name = "Apple-FrameworksUITests";
 			packageProductDependencies = (

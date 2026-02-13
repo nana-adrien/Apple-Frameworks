@@ -10,12 +10,19 @@ import SwiftUI
 
 struct FrameworkTitleView:View {
 	let framework:Framework
+	@Binding var enableList:Bool
 	
 	var body: some View {
-		VStack{
+		TitleViewAlign(
+			enableList: $enableList,
+		){
 			Image(framework.imageName)
 				.resizable()
-				.frame(width: 90,height: 90)
+				.frame(
+					width:  enableList ? 70 : 90,
+					height:  enableList ? 70 : 90
+				)
+			
 			Text(framework.name)
 				.font(.title2)
 				.fontWeight(.semibold)
@@ -24,4 +31,26 @@ struct FrameworkTitleView:View {
 		}
 		.padding()
 	}
+}
+
+
+private struct TitleViewAlign<Content:View >:View{
+	
+	@Binding var enableList:Bool
+	@ViewBuilder let content:()->Content
+	
+	@ViewBuilder
+	var body : some View{
+		if enableList{
+			HStack{
+				content()
+			}
+		} else {
+			VStack{
+				content()
+			}
+		}
+		
+	}
+	
 }
